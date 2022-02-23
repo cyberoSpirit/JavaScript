@@ -36,6 +36,7 @@ const restaurant = {
   },
 };
 
+/*
 //Distructuring assignment
 const arr = [2, 3, 4];
 const [a, b, c, d] = arr;
@@ -83,3 +84,60 @@ const add = function (...numbers) {
 
 add(2, 3);
 add(5, 7, 4, 9);
+*/
+
+const ordersSet = new Set(['Pasta', 'Pizza', 'Pasta', 'Bread', 'Bread']);
+
+console.log(ordersSet);
+console.log(ordersSet.size);
+console.log(ordersSet.has('Pizza'));
+ordersSet.add('Bread');
+ordersSet.delete('Pasta');
+ordersSet.clear();
+console.log(ordersSet);
+
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze Italy');
+console.log(rest.set(2, 'Lisbon, Portugal'));
+
+rest
+  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'open')
+  .set(false, 'close');
+
+console.log(rest.get('name'));
+console.log(rest.get(true));
+console.log(rest.get(1));
+
+const time = 21;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+console.log(rest.has('categories'));
+rest.delete(2);
+
+console.log(rest);
+console.log(rest.size);
+rest.clear();
+
+rest.set([1, 2], 'Test');
+console.log(rest);
+console.log(rest.get([1, 2])); //undefined because it is not the same array
+rest.clear();
+
+const arr = [1, 2];
+rest.set(arr, 'Test');
+console.log(rest);
+console.log(rest.get(arr)); //undefined because it is not the same array
+rest.clear();
+
+const rest2 = new Map([
+  ['categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']],
+  ['open', 11],
+  ['close', 23],
+  [true, 'open'],
+  [false, 'close'],
+]);
+
+console.log(rest2);
