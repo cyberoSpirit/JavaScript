@@ -85,7 +85,7 @@ const add = function (...numbers) {
 add(2, 3);
 add(5, 7, 4, 9);
 */
-
+/*
 const ordersSet = new Set(['Pasta', 'Pizza', 'Pasta', 'Bread', 'Bread']);
 
 console.log(ordersSet);
@@ -141,3 +141,24 @@ const rest2 = new Map([
 ]);
 
 console.log(rest2);
+*/
+
+/*
+//String
+const airLine = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log('8737'[0]);
+console.log(airLine.length);
+console.log('8737'.length);
+console.log(airLine.indexOf('r'));
+console.log(airLine.lastIndexOf('r'));
+console.log(airLine.indexOf('portugal')); //-1 Case sensitive
+console.log(airLine.indexOf('Portugal'));
+
+console.log(airLine.slice(4));
+
+const announcement = 'My door is the closest door to you :)';
+console.log(announcement.replaceAll('door', 'gate'));
+*/
